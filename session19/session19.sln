@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baseballdll", "baseballdll\baseballdll.csproj", "{2F8D0F4A-62B0-426B-AB4E-2E8D14BCBDDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baseballtest", "baseballtest\baseballtest.csproj", "{5775A1A6-34FA-42BF-819F-24FB34110EF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F8D0F4A-62B0-426B-AB4E-2E8D14BCBDDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F8D0F4A-62B0-426B-AB4E-2E8D14BCBDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F8D0F4A-62B0-426B-AB4E-2E8D14BCBDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F8D0F4A-62B0-426B-AB4E-2E8D14BCBDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5775A1A6-34FA-42BF-819F-24FB34110EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5775A1A6-34FA-42BF-819F-24FB34110EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5775A1A6-34FA-42BF-819F-24FB34110EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5775A1A6-34FA-42BF-819F-24FB34110EF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
