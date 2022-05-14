@@ -1,4 +1,8 @@
 ﻿namespace Movies;
+// POCO Objects - Plain Old CSharp Objects
+// A POCO object is a class that is designed to represent a database table.
+
+
 
 public class Movie
 {
