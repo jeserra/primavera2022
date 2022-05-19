@@ -8,11 +8,44 @@ public class Parser
         var values = line.Split(',');
         movie.Id = long.Parse(values[0]);
         movie.Title = values[1];
-       // movie.Genre = (Genre)Enum.Parse(typeof(Genre), values[2]);
-      //  movie.OriginalLanguage = (Original_Language)Enum.Parse(typeof(Original_Language), values[3]);
+        //Action-Science Fiction-Comedy-Family-Adventure
+
+        movie.Genre = ParseGenre(values[2]);
+        movie.OriginalLanguage = ParseOriginalLanguage(values[3]);
         movie.Overview = values[4];
-       // movie.Popularity = long.Parse(values[5]);
+        movie.Popularity = long.Parse(values[5]);
         //movie.ProductionCompanies = values[6].Split('-').ToList();
         return movie;
+    }
+
+    public Genre ParseGenre(string line)
+    {
+        Genre returnValue = new Genre();
+        var values = line.Split('-');
+        foreach (var item in values)
+        {
+            if(item.Any(Char.IsWhiteSpace))
+            {
+                if(item == "Science Fiction")
+                    returnValue = returnValue | Genre.Science | Genre.Fiction;
+            }
+            else 
+            {
+                if (Enum.TryParse<Genre>(item, out var genreValue))
+                    returnValue = returnValue | genreValue;
+            }
+        }
+        return returnValue;
+    }
+
+    public Original_Language ParseOriginalLanguage(string item)
+    {
+        Original_Language returnValue = new Original_Language();
+
+        if (Enum.TryParse<Original_Language>(item, out var languageValue))
+            returnValue = languageValue;
+
+        return returnValue;
+
     }
 }

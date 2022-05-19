@@ -2,9 +2,11 @@
 
 var repository = new Repository();
 
-foreach (var movie in repository.GetAll())
-{
-    Console.WriteLine(movie.Title);
-}
 
+Console.WriteLine("Titulo    --    Genero  --- Idioma");
+foreach (var movie in repository.GetAll().Take(10))
+{
+    Console.WriteLine($"{movie.Title}    --    {movie.Genre}  ---    {movie.OriginalLanguage}");
+}
+ 
  
