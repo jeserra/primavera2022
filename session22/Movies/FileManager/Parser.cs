@@ -13,7 +13,7 @@ public class Parser
         movie.Genre = ParseGenre(values[2]);
         movie.OriginalLanguage = ParseOriginalLanguage(values[3]);
         movie.Overview = values[4];
-        movie.Popularity = long.Parse(values[5]);
+        //movie.Popularity = long.Parse(values[5]);
         //movie.ProductionCompanies = values[6].Split('-').ToList();
         return movie;
     }
@@ -40,12 +40,10 @@ public class Parser
 
     public Original_Language ParseOriginalLanguage(string item)
     {
-        Original_Language returnValue = new Original_Language();
-
+ 
         if (Enum.TryParse<Original_Language>(item, out var languageValue))
-            returnValue = languageValue;
-
-        return returnValue;
-
+            return languageValue;
+        else
+            return Original_Language.none;
     }
 }

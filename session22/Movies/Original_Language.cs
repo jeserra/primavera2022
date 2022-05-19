@@ -1,5 +1,6 @@
 public enum Original_Language
 {
+    none,
     en,
     pl,
     ab,
