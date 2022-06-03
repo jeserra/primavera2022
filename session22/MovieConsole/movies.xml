@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfMovie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Movie><Id>675353</Id><Title>Sonic the Hedgehog 2</Title><Genre>Science Fiction Comedy Family Adventure Action</Genre><OriginalLanguage>en</OriginalLanguage><Overview>After settling in Green Hills Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns this time with a new partner Knuckles in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick Tails and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.</Overview><Popularity>0</Popularity><ReleaseDate>0001-01-01T00:00:00</ReleaseDate><Budget>0</Budget><Revenue>0</Revenue><Runtime>0</Runtime><Status>Released</Status><VoteAverage>0</VoteAverage><VoteCount>0</VoteCount></Movie></ArrayOfMovie>
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfMovie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Movie>
+<Id>675353</Id>
+<Title>Sonic the Hedgehog 2</Title>
+<Genre>Science Fiction Comedy Family Adventure Action</Genre>
+<OriginalLanguage>en</OriginalLanguage>
+<Overview>After settling in Green Hills Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns this time with a new partner Knuckles in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick Tails and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.</Overview>
+<Popularity>0</Popularity>
+<ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+<Budget>0</Budget>
+<Revenue>0</Revenue>
+<Runtime>0</Runtime>
+<Status>Released</Status>
+<VoteAverage>0</VoteAverage>
+<VoteCount>0</VoteCount>
+</Movie>
+</ArrayOfMovie>

@@ -10,6 +10,6 @@ foreach (var movie in repository.GetAll().Take(10))
 }*/
  
 
- IFileWriter writer = new FileWriterXml();
- writer.Write(repository.GetMovieByName("Sonic").Take(10).ToList(), "movies.xml");
+ IFileWriter writer = new FileWriterJson();
+ writer.Write(repository.GetAll().Take(50).ToList(), "movies.json");
  

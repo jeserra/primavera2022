@@ -10,7 +10,7 @@ public class Repository
         { 
             ListMovies = new List<Movie>();
             var listMovieStrings = FileReader.ReadFile(filename);               
-            foreach (var item in listMovieStrings.Skip(1).Take(20))
+            foreach (var item in listMovieStrings.Skip(1).Take(100))
             {
               //  Console.WriteLine(item);
                 var parser = new Parser();
@@ -36,7 +36,7 @@ public class Repository
 
     public List<Movie> GetMovieByName (String title)
     { 
-        Console.WriteLine("leyendo movies por nombre");
+        //Console.WriteLine("leyendo movies por nombre");
         if(LoadedFile == false)
         {
            throw new Exception("No se ha cargado el archivo");
