@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Movies;
-
+using Movies.SqlManager;
 namespace MoviesWebApi.Controllers;
 
 
@@ -13,12 +13,13 @@ namespace MoviesWebApi.Controllers;
 public class MoviesController : ControllerBase
 {
     private readonly ILogger<MoviesController> _logger;
-    private readonly Repository _repository;
+    private readonly IRepository _repository;
     public MoviesController(ILogger<MoviesController> logger)
     {
         _logger = logger;
-        _repository = new Repository();
-        _repository.LoadFile(@"C:\Users\joser\OneDrive\Documentos\TRSF\Spring 2022\movies.csv");
+        _repository = new SqlRepository(); 
+        //_repository = new Repository();
+        //_repository.LoadFile(@"C:\Users\joser\OneDrive\Documentos\TRSF\Spring 2022\movies.csv");
     }
 
     [HttpGet]
