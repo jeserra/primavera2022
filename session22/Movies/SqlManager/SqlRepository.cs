@@ -88,5 +88,95 @@ namespace Movies.SqlManager
 
             return movies;
         }
+
+        public long Create(Movie movie)
+        {
+
+            
+                /* 
+                 *    + " , @credits "
+                            + " , @keywords "
+                            + " , @poster_path "
+                            + " , @backdrop_path "
+                            + " , @recommendations )";*/
+            try
+            {
+
+
+                using (SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString))
+                {
+
+                    connection.Open();
+                    var SqlCreate = "Insert into movies2 (id "
+                            + ",title"
+                            + ",genres"
+                            + ", original_language"
+                            + ", overview"
+                            + ", popularity"
+                            + ", production_companies"
+                            + ", release_date "
+                            + ", budget "
+                            + ", revenue "
+                            + ", runtime "
+                            + ", status"
+                            + ", tagline "
+                            + ", vote_average"
+                            + ", vote_count"
+                            /* + ", credits"
+                             + ", keywords"
+                             + " , poster_path"
+                             + " , backdrop_path"
+                             + " , recommendations */ +" )"
+                            + " Values ( "
+                            + " @id "
+                            + " , @title"
+                            + " , @genres"
+                            + " , @original_language "
+                            + " , @overview "
+                            + " , @popularity "
+                            + " , @production_companies"
+                            + " , @release_date"
+                            + " , @budget "
+                            + " , @revenue "
+                            + " , @runtime "
+                            + " , @status "
+                            + " , @tagline "
+                            + " , @vote_average "
+                            + " , @vote_count) ";
+                            //+ " , @credits )";
+
+
+                    SqlCommand sqlCommand = new SqlCommand(SqlCreate, connection);
+
+                    sqlCommand.Parameters.Add( new SqlParameter("@id", movie.Id));
+
+                    sqlCommand.Parameters.Add(new SqlParameter("@title", movie.Title));
+                    sqlCommand.Parameters.Add(new SqlParameter("@genres", movie.Genre));
+                    sqlCommand.Parameters.Add(new SqlParameter("@original_language", movie.OriginalLanguage));
+                    sqlCommand.Parameters.Add(new SqlParameter("@overview", movie.Overview));
+                    sqlCommand.Parameters.Add(new SqlParameter("@popularity", movie.Popularity));
+                    sqlCommand.Parameters.Add(new SqlParameter("@production_companies", String.Join(" ", movie.ProductionCompanies)));
+                    sqlCommand.Parameters.Add(new SqlParameter("@release_date", movie.ReleaseDate));
+                    sqlCommand.Parameters.Add(new SqlParameter("@budget", movie.Budget));
+                    sqlCommand.Parameters.Add(new SqlParameter("@revenue", movie.Revenue));
+                    sqlCommand.Parameters.Add(new SqlParameter("@runtime", movie.Runtime));
+                    sqlCommand.Parameters.Add(new SqlParameter("@status", movie.Status));
+                    sqlCommand.Parameters.Add(new SqlParameter("@tagline", movie.Tagline));
+                    sqlCommand.Parameters.Add(new SqlParameter("@vote_average", movie.VoteAverage));
+                    sqlCommand.Parameters.Add(new SqlParameter("@vote_count", movie.VoteCount));
+                     
+                    sqlCommand.ExecuteNonQuery();
+                    return movie.Id;
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
     }
 }
+

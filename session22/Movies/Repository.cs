@@ -43,6 +43,11 @@ public class Repository : IRepository
         }
         return ListMovies.Where(m => m.Title.Contains(title)).ToList();
     }
+
+    public long Create (Movie movie)
+    {
+        throw new NotImplementedException();
+    }
 }
 
  

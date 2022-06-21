@@ -36,4 +36,11 @@ public class MoviesController : ControllerBase
        // _logger.Log("Leyendo movies por nombre");
         return _repository.GetMovieByName(title);
     }
+
+    [HttpPost]
+    [Route("Movies")]
+    public long Post([FromBody] Movie movie)
+    {
+        return _repository.Create(movie);
+    }
 }
